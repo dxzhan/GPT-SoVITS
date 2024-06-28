@@ -601,7 +601,7 @@ default_refer = DefaultRefer(args.default_refer_path, args.default_refer_text, a
 
 # 模型路径检查
 if sovits_path == "":
-    sovits_path = g_config.pretrained_sovits_path
+    sovits_path = g_config.pretrained_sovits_2g_path
     logger.warn(f"未指定SoVITS模型路径, fallback后当前值: {sovits_path}")
 if gpt_path == "":
     gpt_path = g_config.pretrained_gpt_path

@@ -140,10 +140,10 @@ with gr.Blocks(title="UVR5 WebUI") as app:
                             visible=False,  # 先不开放调整
                         )
                         opt_vocal_root = gr.Textbox(
-                            label=i18n("指定输出主人声文件夹"), value="output/uvr5_opt"
+                            label=i18n("指定输出主人声文件夹"), value="data/output/uvr5_vocals"
                         )
                         opt_ins_root = gr.Textbox(
-                            label=i18n("指定输出非主人声文件夹"), value="output/uvr5_opt"
+                            label=i18n("指定输出非主人声文件夹"), value="data/output/uvr5_others"
                         )
                         format0 = gr.Radio(
                             label=i18n("导出文件格式"),
@@ -167,7 +167,7 @@ with gr.Blocks(title="UVR5 WebUI") as app:
                         [vc_output4],
                         api_name="uvr_convert",
                     )
-app.queue(concurrency_count=511, max_size=1022).launch(
+app.queue(max_size=1022).launch(
     server_name="0.0.0.0",
     inbrowser=True,
     share=is_share,
