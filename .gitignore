@@ -11,3 +11,5 @@ GPT_weights
 SoVITS_weights
 TEMP
 data
+gweight.txt
+sweight.txt
